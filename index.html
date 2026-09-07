@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CICLOPEL | Comércio de Aparas de Papel LTDA</title>
+
+<meta name="description" content="CICLOPEL - Comércio de Aparas de Papel LTDA. Soluções para comercialização e reaproveitamento de aparas de papel.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f7f9f8;
+    color:#17251e;
+}
+
+.container{
+    width:90%;
+    max-width:1180px;
+    margin:auto;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:10;
+    padding:24px 0;
+}
+
+.nav-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#fff;
+    font-weight:800;
+    font-size:20px;
+}
+
+.logo-icon{
+    width:43px;
+    height:43px;
+    background:#fff;
+    color:#087545;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+}
+
+.menu{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.menu a{
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:500;
+    opacity:.9;
+}
+
+.menu a:hover{
+    opacity:1;
+}
+
+/* HERO */
+
+.hero{
+    min-height:92vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    color:white;
+
+    background:
+    linear-gradient(120deg,rgba(5,55,35,.97),rgba(11,119,68,.88));
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:50%;
+    right:-220px;
+    top:-180px;
+}
+
+.hero-content{
+    max-width:780px;
+    position:relative;
+    z-index:2;
+    padding-top:80px;
+}
+
+.tag{
+    display:inline-block;
+    padding:8px 15px;
+    border-radius:30px;
+    border:1px solid rgba(255,255,255,.25);
+    background:rgba(255,255,255,.08);
+    font-size:12px;
+    font-weight:600;
+    margin-bottom:24px;
+}
+
+.hero h1{
+    font-size:clamp(43px,7vw,75px);
+    line-height:1.02;
+    letter-spacing:-3px;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:#9ee7bb;
+}
+
+.hero p{
+    max-width:650px;
+    color:rgba(255,255,255,.8);
+    font-size:17px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:15px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#fff;
+    color:#086d43;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+    border:1px solid rgba(255,255,255,.35);
+    color:#fff;
+}
+
+.btn-secondary:hover{
+    background:rgba(255,255,255,.1);
+}
+
+/* SOBRE */
+
+.about{
+    padding:100px 0;
+    background:#fff;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.label{
+    color:#087546;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:12px;
+    font-weight:800;
+}
+
+.about h2{
+    font-size:43px;
+    line-height:1.15;
+    margin:13px 0 20px;
+    letter-spacing:-1.5px;
+}
+
+.about p{
+    color:#68756e;
+    line-height:1.8;
+    font-size:15px;
+    margin-bottom:18px;
+}
+
+.list{
+    list-style:none;
+    margin-top:25px;
+}
+
+.list li{
+    margin-bottom:13px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.list li:before{
+    content:"✓";
+    color:#07804a;
+    margin-right:10px;
+    font-weight:800;
+}
+
+.about-card{
+    background:linear-gradient(145deg,#075a39,#15905a);
+    min-height:390px;
+    border-radius:22px;
+    padding:45px;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.about-card:after{
+    content:"♻️";
+    position:absolute;
+    right:-20px;
+    bottom:-65px;
+    font-size:210px;
+    opacity:.08;
+}
+
+.about-card h3{
+    font-size:34px;
+    line-height:1.2;
+    position:relative;
+    z-index:2;
+}
+
+.about-card p{
+    color:rgba(255,255,255,.75);
+    margin-top:18px;
+    position:relative;
+    z-index:2;
+}
+
+/* SERVIÇOS */
+
+.services{
+    padding:100px 0;
+    background:#f3f7f5;
+}
+
+.section-header{
+    max-width:680px;
+    margin-bottom:50px;
+}
+
+.section-header h2{
+    font-size:42px;
+    margin:12px 0;
+    letter-spacing:-1px;
+}
+
+.section-header p{
+    color:#68756e;
+    line-height:1.7;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:#fff;
+    border:1px solid #e5ece8;
+    padding:32px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 40px rgba(0,60,35,.08);
+}
+
+.icon{
+    width:52px;
+    height:52px;
+    background:#e8f6ee;
+    color:#087646;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:23px;
+    margin-bottom:22px;
+}
+
+.card h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#718078;
+    font-size:14px;
+    line-height:1.7;
+}
+
+/* DIFERENCIAIS */
+
+.differentials{
+    padding:100px 0;
+    background:#fff;
+}
+
+.diff-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.diff{
+    padding:28px;
+    border:1px solid #e5ebe8;
+    border-radius:14px;
+}
+
+.diff strong{
+    display:block;
+    font-size:17px;
+    margin-bottom:8px;
+}
+
+.diff span{
+    font-size:13px;
+    color:#748078;
+    line-height:1.6;
+}
+
+/* CTA */
+
+.cta{
+    padding:80px 0;
+    background:#f3f7f5;
+}
+
+.cta-box{
+    background:linear-gradient(135deg,#064d31,#138754);
+    border-radius:22px;
+    padding:60px;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+}
+
+.cta-box h2{
+    font-size:38px;
+    line-height:1.15;
+    margin-bottom:12px;
+}
+
+.cta-box p{
+    color:rgba(255,255,255,.75);
+    max-width:600px;
+}
+
+/* CONTATO */
+
+.contact{
+    padding:100px 0;
+    background:#fff;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.contact-card{
+    border:1px solid #e4ebe7;
+    border-radius:15px;
+    padding:35px;
+}
+
+.contact-card h3{
+    margin-bottom:22px;
+}
+
+.contact-item{
+    margin-bottom:20px;
+}
+
+.contact-item strong{
+    display:block;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#087546;
+    margin-bottom:5px;
+}
+
+.contact-item span{
+    color:#68756e;
+    font-size:14px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#092d1f;
+    color:#fff;
+    padding:45px 0 25px;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    padding-bottom:30px;
+}
+
+.footer-logo{
+    font-size:19px;
+    font-weight:800;
+}
+
+.footer-text{
+    max-width:450px;
+    color:rgba(255,255,255,.55);
+    font-size:13px;
+    line-height:1.7;
+}
+
+.copyright{
+    border-top:1px solid rgba(255,255,255,.1);
+    padding-top:20px;
+    text-align:center;
+    color:rgba(255,255,255,.4);
+    font-size:11px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:850px){
+
+    .menu{
+        display:none;
+    }
+
+    .hero{
+        min-height:100vh;
+    }
+
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cards{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .diff-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .cta-box{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .footer-content{
+        flex-direction:column;
+    }
+}
+
+@media(max-width:550px){
+
+    .container{
+        width:88%;
+    }
+
+    .hero h1{
+        font-size:45px;
+        letter-spacing:-2px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .about,
+    .services,
+    .differentials,
+    .contact{
+        padding:75px 0;
+    }
+
+    .about h2,
+    .section-header h2{
+        font-size:32px;
+    }
+
+    .cards,
+    .diff-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-card{
+        padding:35px;
+        min-height:330px;
+    }
+
+    .cta-box{
+        padding:40px 30px;
+    }
+
+    .cta-box h2{
+        font-size:30px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- INÍCIO -->
+
+<header class="hero" id="inicio">
+
+<nav class="navbar">
+
+<div class="container nav-content">
+
+<div class="logo">
+<div class="logo-icon">♻️</div>
+CICLOPEL
+</div>
+
+<ul class="menu">
+<li><a href="#inicio">Início</a></li>
+<li><a href="#empresa">Empresa</a></li>
+<li><a href="#atuacao">Atuação</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+
+</div>
+
+</nav>
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="tag">
+COMÉRCIO E REAPROVEITAMENTO DE MATERIAIS
+</div>
+
+<h1>
+CICLOPEL<br>
+<span>Comércio de Aparas de Papel</span>
+</h1>
+
+<p>
+Atuamos na comercialização de aparas de papel,
+contribuindo para o reaproveitamento de materiais
+e para uma cadeia de reciclagem mais eficiente,
+responsável e sustentável.
+</p>
+
+<div class="buttons">
+
+<a href="#atuacao" class="btn btn-primary">
+Conheça nossa atuação
+</a>
+
+<a href="#contato" class="btn btn-secondary">
+Entre em contato
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- EMPRESA -->
+
+<section class="about" id="empresa">
+
+<div class="container about-grid">
+
+<div>
+
+<div class="label">Sobre a CICLOPEL</div>
+
+<h2>
+Soluções para uma cadeia de reciclagem mais eficiente.
+</h2>
+
+<p>
+A <strong>CICLOPEL - COMERCIO DE APARAS DE PAPEL LTDA</strong>
+atua no segmento de comércio de aparas de papel, conectando
+materiais reaproveitáveis a processos que possibilitam sua
+reutilização.
+</p>
+
+<p>
+Nosso trabalho está relacionado ao aproveitamento adequado
+de materiais, contribuindo para a redução de desperdícios e
+para o fortalecimento da economia circular.
+</p>
+
+<ul class="list">
+<li>Comercialização de aparas de papel</li>
+<li>Foco em reaproveitamento de materiais</li>
+<li>Atendimento profissional</li>
+<li>Compromisso com eficiência e sustentabilidade</li>
+</ul>
+
+</div>
+
+
+<div class="about-card">
+
+<h3>
+Transformando materiais
+em novas possibilidades.
+</h3>
+
+<p>
+O reaproveitamento de papel é uma etapa importante
+para reduzir desperdícios e manter materiais dentro
+da cadeia produtiva.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ATUAÇÃO -->
+
+<section class="services" id="atuacao">
+
+<div class="container">
+
+<div class="section-header">
+
+<div class="label">Nossa atuação</div>
+
+<h2>
+Comércio de aparas de papel
+</h2>
+
+<p>
+Atuação direcionada ao mercado de materiais recicláveis,
+com foco na comercialização e movimentação de aparas de papel.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card">
+
+<div class="icon">♻️</div>
+
+<h3>Compra de Aparas</h3>
+
+<p>
+Atuação na aquisição de aparas e materiais de papel
+destinados ao reaproveitamento e à reciclagem.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">▣</div>
+
+<h3>Comercialização</h3>
+
+<p>
+Comercialização de materiais selecionados para
+atender às necessidades do mercado de reciclagem.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">↻</div>
+
+<h3>Reaproveitamento</h3>
+
+<p>
+Contribuição para que materiais que seriam descartados
+possam retornar à cadeia produtiva.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DIFERENCIAIS -->
+
+<section class="differentials">
+
+<div class="container">
+
+<div class="section-header">
+
+<div class="label">Nossos diferenciais</div>
+
+<h2>
+Uma atuação baseada em responsabilidade.
+</h2>
+
+</div>
+
+
+<div class="diff-grid">
+
+<div class="diff">
+<strong>♻️ Sustentabilidade</strong>
+<span>
+Valorização do reaproveitamento e da reciclagem de materiais.
+</span>
+</div>
+
+<div class="diff">
+<strong>✓ Profissionalismo</strong>
+<span>
+Atuação responsável e comprometida com nossos parceiros.
+</span>
+</div>
+
+<div class="diff">
+<strong>↗️ Eficiência</strong>
+<span>
+Busca constante por processos mais organizados e eficientes.
+</span>
+</div>
+
+<div class="diff">
+<strong>◎ Parcerias</strong>
+<span>
+Construção de relações comerciais duradouras e transparentes.
+</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<div class="cta-box">
+
+<div>
+
+<h2>
+Vamos conversar?
+</h2>
+
+<p>
+Entre em contato com a CICLOPEL para conhecer
+nossa atuação e nossas possibilidades comerciais.
+</p>
+
+</div>
+
+<a href="#contato" class="btn btn-primary">
+Falar com a CICLOPEL
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTATO -->
+
+<section class="contact" id="contato">
+
+<div class="container">
+
+<div class="section-header">
+
+<div class="label">Contato</div>
+
+<h2>
+Fale com a CICLOPEL
+</h2>
+
+<p>
+Para informações comerciais, parcerias ou dúvidas,
+entre em contato conosco.
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<h3>
+CICLOPEL - COMERCIO DE APARAS DE PAPEL LTDA
+</h3>
+
+<div class="contact-item">
+<strong>Empresa</strong>
+<span>CICLOPEL - COMERCIO DE APARAS DE PAPEL LTDA</span>
+</div>
+
+<div class="contact-item">
+<strong>Segmento</strong>
+<span>Comércio de aparas de papel</span>
+</div>
+
+<div class="contact-item">
+<strong>Atuação</strong>
+<span>Materiais recicláveis e reaproveitamento de papel</span>
+</div>
+
+</div>
+
+
+<div class="contact-card">
+
+<h3>
+Atendimento
+</h3>
+
+<div class="contact-item">
+<strong>Contato comercial</strong>
+<span>Entre em contato para informações e oportunidades comerciais.</span>
+</div>
+
+<div class="contact-item">
+<strong>Horário</strong>
+<span>Atendimento em horário comercial.</span>
+</div>
+
+<div class="contact-item">
+<strong>Mensagem</strong>
+<span>Será um prazer atender você.</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-content">
+
+<div>
+
+<div class="footer-logo">
+CICLOPEL
+</div>
+
+<p class="footer-text">
+CICLOPEL - COMERCIO DE APARAS DE PAPEL LTDA.
+Comércio e reaproveitamento de materiais de papel,
+contribuindo para uma cadeia produtiva mais sustentável.
+</p>
+
+</div>
+
+<div class="footer-text">
+© 2026 CICLOPEL. Todos os direitos reservados.
+</div>
+
+</div>
+
+<div class="copyright">
+CICLOPEL - COMERCIO DE APARAS DE PAPEL LTDA
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
